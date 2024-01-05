@@ -4,8 +4,9 @@ from todo_app.data.view_model import ViewModel
 
 from todo_app.flask_config import Config
 
-app = Flask(__name__)
-app.config.from_object(Config())
+def create_app():
+  app = Flask(__name__)
+  app.config.from_object(Config())
 
 @app.route('/')
 def index():
@@ -23,3 +24,5 @@ def add_todo():
 def complete_item(todo_id):
     move_item_to_done(todo_id)
     return redirect('/')
+
+    return app
