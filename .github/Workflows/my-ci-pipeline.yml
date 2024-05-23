@@ -1,6 +1,13 @@
 name: Continuous Integration
-on: [push]
+on: 
+   push:
+    paths:
+      - 'READ.md'
+   pull-request:
+    paths:
+      - 'READ.md'
 
+      
 jobs:
   build:
     name: Build and test
