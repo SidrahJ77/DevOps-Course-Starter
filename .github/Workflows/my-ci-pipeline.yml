@@ -1,10 +1,10 @@
 name: Continuous Integration
 on: 
    push:
-    paths:
+    paths-ignore:
       - 'READ.md'
    pull_request:
-    paths:
+    paths-ignore:
       - 'READ.md'
 
 
