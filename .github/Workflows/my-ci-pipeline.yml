@@ -3,11 +3,11 @@ on:
    push:
     paths:
       - 'READ.md'
-   pull-request:
+   pull_request:
     paths:
       - 'READ.md'
 
-      
+
 jobs:
   build:
     name: Build and test
