@@ -68,6 +68,12 @@ Poetry run pytest
 ```
 (please make usre you run 'poetry install' beforehand to install 'pytest')
 
+If intead you would like to run your tests via Docker, please run the followig:
+```
+docker build --tag todo-app:test --target test .
+docker run todo-app:test
+```
+
 ## Building and Running the App via Docker
 To build the container for local development, please run
 ```bash
