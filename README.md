@@ -90,3 +90,16 @@ docker run --publish 8000:5000 -it --env-file .env todo-app:prod
 ```
 
 ## Images are stored in 'Diagrams' folder
+
+## Azure Hosting
+The container image that is deployed to Azure is hosted on Docker Hub at: https://hub.docker.com/repository/docker/sidrahj/hello-world/general
+
+The website itself is hosted at: https://sidrahsappservice.azurewebsites.net/
+
+To update the website you will need to run the following commands:
+```
+docker build --tag sidrahj/hello-world --target production .
+docker push sidrahj/hello-world
+```
+
+Next you'll need to make a POST request to the webhook link provided on the App Service (under the Deployment Centre tab). This will trigger Azure to pull the updated image from Docker Hub.
