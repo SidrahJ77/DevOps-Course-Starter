@@ -32,4 +32,4 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
     - run: docker build --tag sidrahj/todo-app:latest --target production .
     - run: docker push sidrahj/todo-app:latest
-    - run: curl -dH -X POST ${{ secrets.APP_SERVICE_DEPLOYMENT_WEBHOOK }}
+    - run: curl -dH -X POST '${{ secrets.APP_SERVICE_DEPLOYMENT_WEBHOOK }}'
