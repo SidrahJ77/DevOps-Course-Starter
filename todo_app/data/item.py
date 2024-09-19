@@ -9,3 +9,6 @@ class Item:
         return Item(card['id'], card['name'], list['name'])
     
     
+    @classmethod
+    def from_mongo_document(cls, document):
+        return Item(document['_id'], document['name'], document['status'])
